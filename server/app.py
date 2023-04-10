@@ -13,8 +13,9 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
-
+app.secret_key = 'super secret key'
 migrate = Migrate(app, db)
+
 
 db.init_app(app)
 
@@ -114,10 +115,10 @@ class Signup(Resource):
 
             return user.to_dict(), 201
 
-        except IntegrityError:
-
-            print('no, here!')
+        except IntegrityError as ie:
             
+            print(ie.orig)
+            print(ie.statement)
             return {'error': '422 Unprocessable Entity'}, 422
         
 class CheckSession(Resource):

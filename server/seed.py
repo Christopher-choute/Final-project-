@@ -54,7 +54,7 @@ if __name__ == '__main__':
         fish29 = Fish(species = 'Oranda Goldfish' , price = 30, tank_size = '10G', water_preference = 'Freshwater', temperature_preference = '65-72', aggressiveness = 'low', life_expectancy = '8 - 15', image = 'https://petkeen.com/wp-content/uploads/2021/01/Oranda-Goldfish_Nantawat-Chotsuwan_shutterstock.jpg')
         fish30 = Fish(species = 'Lungfish' , price = 150, tank_size = '60G', water_preference = 'Freshwater', temperature_preference = '76-86', aggressiveness = 'high', life_expectancy = '100 years', image = 'https://animals.sandiegozoo.org/sites/default/files/2019-12/hero-westafricanlungfish.jpg')
 
-        fishes = [fish1, fish2, fish3, fish4, fish5, fish6, fish7, fish8,fish9,fish10, fish11]
+        fishes = [fish1, fish2, fish3, fish4, fish5, fish6, fish7, fish8,fish9,fish10, fish11,fish12, fish13, fish14, fish15, fish16,fish18, fish19, fish20, fish21, fish22, fish23, fish24, fish25, fish26, fish27, fish28, fish29, fish30]
             # Seed code goes here!
 
         print('creating Tanks...')
