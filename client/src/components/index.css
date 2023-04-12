@@ -1,0 +1,47 @@
+/* .fishImg{
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    left: 30%;
+    position: relative;  
+}
+
+.fish{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+} */
+
+.fishImg {
+    width: 75%;
+    height: 75%;
+    left: 15%;
+    position: relative;  
+  }
+  
+  .fish {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .fish p {
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .fishInfo{
+    background-color: whitesmoke;
+    padding: 10px;
+    max-width: 545px;
+    margin: 0 auto;
+  }
+
+  /* .soloFish img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  } */
+  

@@ -68,6 +68,68 @@ def fish():
             )
     return response
 
+@app.route('/fishes/<int:id>', methods=['GET', 'DELETE', 'PATCH'])
+def fishById(id):
+    fish = Fish.query.filter_by(id=id).first()
+
+    # if not fish:
+    #     return make_response({'error': 'Fish Not Found!'}, 404)
+    
+    # return make_response(fish.to_dict(), 200) 
+    fish = Fish.query.filter_by(id=id).first()
+
+    if request.method == 'GET':
+        if fish:
+            fish_dict = fish.to_dict()
+
+            response = make_response(
+                jsonify(fish_dict),
+                200
+            )
+        else:
+            response = make_response(
+                {"error": "Fish not found"},
+                404
+            )
+
+        return response
+    
+    elif request.method == 'DELETE':
+        fish = Fish.query.filter(Fish.id == id).first()
+
+        if not fish:
+            response = make_response(
+                {"error": "Fish not found"},
+                404
+            )
+            return response
+        
+        db.session.delete(fish)
+        db.session.commit()
+        return make_response({'success': 'Fish deleted'}, 200)
+    
+    elif request.method == 'PATCH':
+        fish = Fish.query.filter(Fish.id == id).first()
+
+        if not fish:
+            response = make_response(
+                {"error": "Fish not found"},
+                404
+            )
+            return response
+        
+        for attr in request.get_json():
+            setattr(fish, attr, request.get_json()[attr])
+
+        db.session.add(fish)
+        db.session.commit()
+
+        return make_response(
+            fish.to_dict(),
+            200
+        )
+
+
 @app.route('/fishtanks', methods=['GET'])
 def fishtank():
     fishtanks = Fishtank.query.all()
