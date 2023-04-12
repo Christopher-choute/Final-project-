@@ -1,7 +1,10 @@
 import React from 'react'
 import {useState,useEffect} from "react";
-import {Route, Switch, useParams} from "react-router-dom"
+import {Route, Switch, useParams, Link} from "react-router-dom"
+import {Form, Button} from"semantic-ui-react"
+import Edit from './Edit';
 import './index.css'
+
 
 function FishSingle({deleteItem}){
     const {id} = useParams();
@@ -32,7 +35,7 @@ useEffect(() => {
     setSpecies(fish.species);
     setPrice(fish.price);
     setTankSize(fish.tank_size);
-    setImage(fish.image);
+   setImage(fish.image);
     setWaterPreference(fish.water_preference);
     setLifeExpectancy(fish.life_expectancy);
     setAggressiveness(fish.aggressiveness);
@@ -49,7 +52,8 @@ useEffect(() => {
         <h2 className ='h2'> Life expectancy: {life_expectancy}</h2>
         <h2 className ='h2'> Aggressiveness: {aggressiveness}</h2>
         <h2 className ='h2'> temperature preference: {temperature_preference}</h2>
-        <button onClick = {() => deleteItem(id)}   className = 'btn' >BUY (QTY: 1)</button>
+        <Button onClick = {() => deleteItem(id)}   className = 'btn' >BUY (QTY: 1)</Button>
+        <Link to={`/Edit/${id}`} ><Button>Edit</Button></Link>
     </div>
   )
  }

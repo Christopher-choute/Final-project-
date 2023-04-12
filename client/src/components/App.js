@@ -7,11 +7,13 @@ import FishSingle from "./FishSingle";
 import Home from "./Home";
 import Header from "./Header";
 import './index.css'
+import Edit from "./Edit";
 // import Login from "../pages/Login";
 
 function App() {
   const [user, setUser] = useState(null);
   const [deleted, setDeleted] = useState(false);
+  const [fishData, setFishData] = useState(null);
 
   const history = useHistory()
 
@@ -33,6 +35,16 @@ function App() {
     .then(() => history.push('/fishes'))
   }
 
+  function updateFish(updatedFish) {
+    const updatedCars = fishData.map(ogFish => {
+        if (ogFish.id === updatedFish.id)
+            return updatedFish
+        else
+            return ogFish;
+    })
+    setFishData(updatedFish)
+  
+  }
 
   useEffect(() => {
     fetch("/user")       // link for the authors DB
@@ -50,14 +62,21 @@ function App() {
         <Switch>
           <Route path="/new">
           </Route>
+
           <Route exact path="/">
             <Fish />
           </Route>
+
           <Route path="/FishSingle/:id">
             <FishSingle  deleteItem={deleteItem} />
           </Route>
-          <Route path="/fishes/:id" method="DELETE">
+
+          <Route path="/Fishes/:id" method="DELETE">
             < Home/>
+          </Route>
+
+          <Route path="/edit/:id/">
+            <Edit updateFish={updateFish} />
           </Route>
         </Switch>
       </main>

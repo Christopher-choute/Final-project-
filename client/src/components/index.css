@@ -16,8 +16,15 @@
     width: 75%;
     height: 75%;
     left: 15%;
-    position: relative;  
+    position: relative;
+    transition: 1s ease;
   }
+
+.fishImg:hover{
+   /* Add a white shadow effect */
+   border-radius:50%;
+   transition: 1s ease;
+}
   
   .fish {
     display: grid;
