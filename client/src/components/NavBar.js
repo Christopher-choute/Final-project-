@@ -16,11 +16,13 @@ function NavBar({ user, setUser }) {
     <Wrapper>
       <Logo>
         <Link to="/">Fish Haven</Link>
+        {/* <p className="slogan">Dive into the world of fish trading</p> */}
       </Logo>
       <Nav>
-        <Button as={Link} to="/new">
+      <Button className="btn">Call To Action</Button>
+        {/* <Button as={Link} to="/new">
           Add fish
-        </Button>
+        </Button> */}
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
         </Button>
@@ -33,13 +35,15 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 8px 0 106px;
+  background-color:#33cccc;
 `;
 
+
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: "Lato";
   font-size: 3rem;
-  color: blue;
+  color: white;
   margin: 0;
   line-height: 1;
 
@@ -55,5 +59,6 @@ const Nav = styled.nav`
   position: absolute;
   right: 8px;
 `;
+
 
 export default NavBar;

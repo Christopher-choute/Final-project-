@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext} from "react";
 import { Switch, Route, useHistory} from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "./Login";
@@ -8,12 +8,20 @@ import Home from "./Home";
 import Header from "./Header";
 import './index.css'
 import Edit from "./Edit";
+// import Sidebar from "./Sidebar";
+
+export const UserContext = createContext()
+
+// import Context from './Context'
 // import Login from "../pages/Login";
 
 function App() {
   const [user, setUser] = useState(null);
   const [deleted, setDeleted] = useState(false);
-  const [fishData, setFishData] = useState(null);
+  // const [fishData, setFishData] = useState(null);
+  // const {mode, toggleMode} =useContext(ThemeContext);
+  // const { isDarkMode } = useContext(ThemeContext);
+  // const theme = isDarkMode ? darkTheme : lightTheme;
 
   const history = useHistory()
 
@@ -45,6 +53,12 @@ function App() {
     setFishData(updatedFish)
   
   }
+  const [fishData, setFishData] = useState([]);
+  useEffect(() => {
+      fetch("/fishes")
+      .then(res => res.json())
+      .then((data) => setFishData(data))
+    },[]);
 
   useEffect(() => {
     fetch("/user")       // link for the authors DB
@@ -55,7 +69,12 @@ function App() {
   if (!user) return <Login onLogin={setUser} />;
 
   return (
-    <>
+    // <ThemeProvider>
+    //   <GlobalStyle/>
+    // <ThemeProvider>
+
+    <div>
+     <UserContext.Provider value = {[fishData]}>
       <NavBar user={user} setUser={setUser} />
       <Header/>
       <main>
@@ -80,7 +99,9 @@ function App() {
           </Route>
         </Switch>
       </main>
-    </>
+    </UserContext.Provider>
+    </div>
+    //  
   );
 
 }

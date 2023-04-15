@@ -1,15 +1,18 @@
-import React, {useState,useEffect} from "react";
+import React, {useState,useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import FishCard from "./FishCard"
 import './index.css'
+import { UserContext } from "./App";
 
 function Fish(){
-    const [fishData, setFishData] = useState([]);
-    useEffect(() => {
-        fetch("/fishes")
-        .then(res => res.json())
-        .then((data) => setFishData(data))
-      },[]);
+    // const [fishData, setFishData] = useState([]);
+    // useEffect(() => {
+    //     fetch("/fishes")
+    //     .then(res => res.json())
+    //     .then((data) => setFishData(data))
+    //   },[]);
+
+    const [fishData]=useContext(UserContext)
       
       const fishList = fishData.map((fish) => { 
         return(

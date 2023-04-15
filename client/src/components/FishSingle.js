@@ -52,7 +52,7 @@ useEffect(() => {
         <h2 className ='h2'> Life expectancy: {life_expectancy}</h2>
         <h2 className ='h2'> Aggressiveness: {aggressiveness}</h2>
         <h2 className ='h2'> temperature preference: {temperature_preference}</h2>
-        <Button onClick = {() => deleteItem(id)}   className = 'btn' >BUY (QTY: 1)</Button>
+        <Button onClick = {() => deleteItem(id)}   className = 'btn' >ORDER</Button>
         <Link to={`/Edit/${id}`} ><Button>Edit</Button></Link>
     </div>
   )
