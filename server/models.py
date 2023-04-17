@@ -111,7 +111,7 @@ class User (db.Model, SerializerMixin):
 
     @validates('price')
     def validates_strength(self,key, price):
-        if price >= 1 or price <= 30:
+        if price < 0:
             return price
         raise ValueError({"error": "Invalid price bozo!!!"})
 

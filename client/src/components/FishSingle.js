@@ -44,6 +44,7 @@ useEffect(() => {
 
  return(
     <div className = 'soloFish'>
+      <Link to={`/Edit/${id}`} ><i  class="edit icon"></i></Link>
         <img src = {image} className = 'Img'/>
         <h1>species: {species}</h1>
         <h1>price: ${price}</h1>
@@ -53,7 +54,6 @@ useEffect(() => {
         <h2 className ='h2'> Aggressiveness: {aggressiveness}</h2>
         <h2 className ='h2'> temperature preference: {temperature_preference}</h2>
         <Button onClick = {() => deleteItem(id)}   className = 'btn' >ORDER</Button>
-        <Link to={`/Edit/${id}`} ><Button>Edit</Button></Link>
     </div>
   )
  }

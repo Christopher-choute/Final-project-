@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import "semantic-ui-css/semantic.min.css"
+import "semantic-ui-css/semantic.min.css";
 // import  Context  from "./context";
 
+
+// export const UserContext = createContext()
 const GlobalStyle = createGlobalStyle`
   *,
   *::before, 
@@ -24,8 +26,10 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <BrowserRouter>
-    <GlobalStyle />
-    <App />
+    {/* <UserContext.Provider value={[fishData]}> */}
+      <GlobalStyle />
+      <App />
+    {/* </UserContext.Provider> */}
   </BrowserRouter>,
   document.getElementById("root")
 );

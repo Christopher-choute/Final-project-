@@ -1,8 +1,18 @@
-import React from "react"
+import React, {useContext, useState} from "react"
 import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
+import Search from './Search';
+import { UserContext } from "./App";
 
-function Header() {
+function Header({handleChange,search, setSearch}) { 
+
+  const [fishData]=useContext(UserContext)
+//   const [search, setSearch] = useState("");
+
+// let filteredFish = fishData.filter(fish => fish.name.toLowerCase().includes(search.toLowerCase()));
+
+
+
     return(
         <HeaderContainer>
             <div className="nav">
@@ -13,6 +23,7 @@ function Header() {
                 </NavbarItem>
                 </NavbarList>
                 </NavbarContainer>
+                <Search onChange={handleChange} search = {search} setSearch = {setSearch}/>
             </div>
         </HeaderContainer>
             
