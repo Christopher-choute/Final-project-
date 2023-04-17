@@ -44,8 +44,9 @@ useEffect(() => {
 
  return(
     <div className = 'soloFish'>
-      <Link to={`/Edit/${id}`} ><i  class="edit icon"></i></Link>
-        <img src = {image} className = 'Img'/>
+      
+        <img src = {image} className = 'fishImg'/>
+        <Link to={`/edit/${id}`} ><i  className="edit icon"></i></Link>
         <h1>species: {species}</h1>
         <h1>price: ${price}</h1>
         <h2 className ='h2' > Tank size: {tank_size}</h2>

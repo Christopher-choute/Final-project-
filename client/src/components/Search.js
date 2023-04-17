@@ -10,8 +10,8 @@ function Search({ handleChange, search,setSearch }) {
 
   return (
     <Form className="searchBar">
-      {/* <i class="search icon"></i> */}
-        <i class="search icon"></i>
+      {/* <i className="search icon"></i> */}
+        {/* <label className="searchIcon"></label> */}
       <input 
         //  value = {search}
         type="text"

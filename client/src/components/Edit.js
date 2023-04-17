@@ -6,6 +6,7 @@ import Fish from "./Fish";
 
 
 function Edit({updateFish}){
+    console.log('test')
     const { id } = useParams();
     const history = useHistory();
     const [species, setSpecies] = useState("");
@@ -86,7 +87,7 @@ function Edit({updateFish}){
             })
     }, [])
     
-    
+    console.log('test')
     return (
             <Form onSubmit={() => handlePatch(id)} style={{ maxWidth: '1000px' }}>
             <h3 id ="form-title">Edit Fish info</h3>

@@ -12,12 +12,27 @@
     grid-gap: 20px;
 } */
 
+/* .fishCard{
+  width: 300px; /* set a fixed width */
+  /* height: 400px; 
+  margin: 10px; add some margin between cards
+} */ 
+
 .fishImg {
-    width: 75%;
+    width: 100%;
     height: 75%;
-    left: 15%;
+    /* left: 15%; */
     position: relative;
     transition: 1s ease;
+  
+  }
+  
+  .fishInfo{
+    background-color: whitesmoke;
+    /* padding: 10px; */
+    max-width: 75%;
+    /* max-height: 100vh; */
+    margin: 0 auto;
   }
 
 .fishImg:hover{
@@ -38,12 +53,6 @@
     color: black;
   }
   
-  .fishInfo{
-    background-color: whitesmoke;
-    padding: 10px;
-    max-width: 545px;
-    margin: 0 auto;
-  }
 
 .soloFish{
   text-align: center;
@@ -75,12 +84,17 @@
 }
 
 .searchBar{
-  width: 10%;
+  width: 20%;
   /* align-items: left; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
   /* position: "fixed"; */
   /* margin-left: 500px; */
+}
+.searchIcon{
+/* flex-direction: row; */
+display: flex;
+ position: relative;
 }
 
 .sale-div {

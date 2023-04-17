@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Search from "./Search";
 import { UserContext } from "./App";
@@ -12,19 +12,19 @@ function Header({ handleChange, search, setSearch }) {
 
   return (
     <HeaderContainer>
-      <div className="sale-div">
-        <NavbarContainer>
-          <div >
-            <h1 className="sale">Want to sell a fish?</h1>
-          </div>
-          <NavbarList>
-            <NavbarItem>
-              {/* <NavLink to="/">Home</NavLink> */}
-            </NavbarItem>
-          </NavbarList>
-        </NavbarContainer>
-        {/* <Search onChange={handleChange} search={search} setSearch={setSearch} /> */}
-      </div>
+      <Link to="/FishSingle/1">
+        <div className="sale-div">
+          <NavbarContainer>
+            <div>
+              <h1 className="sale">Want to sell a fish?</h1>
+            </div>
+            <NavbarList>
+              <NavbarItem>{/* <NavLink to="/">Home</NavLink> */}</NavbarItem>
+            </NavbarList>
+          </NavbarContainer>
+          {/* <Search onChange={handleChange} search={search} setSearch={setSearch} /> */}
+        </div>
+      </Link>
     </HeaderContainer>
   );
 }

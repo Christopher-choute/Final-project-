@@ -57,14 +57,14 @@ function NavBar({ user, setUser,handleChange, search, setSearch }) {
     <Wrapper>
       <Search onChange={handleChange} search={search} setSearch={setSearch} />
       <Logo>
-        <Link to="/">Fish Haven</Link>
-        {/* <p className="slogan">Dive into the world of fish trading</p> */}
+        <Link to="/" className="haven">Fish Haven</Link>
+        {/* <h1 className="slogan">Dive into the world of fish trading</h1> */}
       </Logo>
       <Nav>
         <NavbarContainer>
         <NavbarList>
         <NavbarItem>
-          <NavLink exact to = "/">Home</NavLink>
+          {/* <NavLink exact to = "/">Home</NavLink> */}
         </NavbarItem>
         {/* Make sure you make a intro page component and swap out the recipe one */}
         <NavbarItem>
@@ -74,7 +74,7 @@ function NavBar({ user, setUser,handleChange, search, setSearch }) {
             Add fish
           </Button> */}
           <Button variant="outline" onClick={handleLogoutClick}>
-          <i class="sign out alternate icon"></i>
+          <i className="sign out alternate icon"></i>
             Logout
           </Button>
           </NavbarList>
