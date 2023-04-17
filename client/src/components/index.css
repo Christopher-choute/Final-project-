@@ -73,3 +73,35 @@
   background-color: white;
   color: #33cccc;
 }
+
+.searchBar{
+  width: 10%;
+  /* align-items: left; */
+  display: flex;
+  flex-direction: column;
+  /* position: "fixed"; */
+  /* margin-left: 500px; */
+}
+
+.sale-div {
+  background-image: url(https://clickhole.com/wp-content/uploads/2021/04/iStock-519618496-scaled-e1617891544142.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 25px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.sale{
+  color: white;
+  font-size: 50px;
+}

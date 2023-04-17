@@ -95,7 +95,7 @@ function App() {
 
     <div>
      <UserContext.Provider value = {[fishData]}>
-      <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} handleChange={handleChange} search = {search} setSearch={setSearch} />
       <Header handleChange={handleChange} search = {search} setSearch={setSearch}/>
       <main>
         <Switch>

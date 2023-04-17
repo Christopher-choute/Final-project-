@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "semantic-ui-react";
 
+
 function Search({ handleChange, search,setSearch }) {
   // function handleSearch(e){
   //     const value = e.target.value
@@ -8,8 +9,10 @@ function Search({ handleChange, search,setSearch }) {
   // }
 
   return (
-    <Form>
-      <input
+    <Form className="searchBar">
+      {/* <i class="search icon"></i> */}
+        <i class="search icon"></i>
+      <input 
         //  value = {search}
         type="text"
         //  id = "search"
@@ -18,6 +21,14 @@ function Search({ handleChange, search,setSearch }) {
         //  onChange = {handleChange}
         onChange={(e) => setSearch(e.target.value)}
       />
+
+      {/* <Search
+            fluid
+            loading={isLoading}
+            value={search}
+            placeholder="Search Fish..."
+            on
+          /> */}
     </Form>
   );
 }

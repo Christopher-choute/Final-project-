@@ -40,7 +40,7 @@ const NavLink = styled.a`
     
 `;
 
-function NavBar({ user, setUser }) {
+function NavBar({ user, setUser,handleChange, search, setSearch }) {
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -49,12 +49,13 @@ function NavBar({ user, setUser }) {
     });
   }
   const [fishData]=useContext(UserContext)
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
 
   // let filteredFish = fishData.filter(fish => fish.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <Wrapper>
+      <Search onChange={handleChange} search={search} setSearch={setSearch} />
       <Logo>
         <Link to="/">Fish Haven</Link>
         {/* <p className="slogan">Dive into the world of fish trading</p> */}
@@ -78,7 +79,7 @@ function NavBar({ user, setUser }) {
           </Button>
           </NavbarList>
         </NavbarContainer>
-        <Search search = {search} setSearch = {setSearch} />
+        {/* <Search search = {search} setSearch = {setSearch} /> */}
       </Nav>
     </Wrapper>
 
@@ -87,7 +88,7 @@ function NavBar({ user, setUser }) {
 
 const Wrapper = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 8px 0 106px;
   background-color:#33cccc;
@@ -100,6 +101,7 @@ const Logo = styled.h1`
   color: white;
   margin: 0;
   line-height: 1;
+  margin-right: 1000px;
 
   a {
     color: inherit;
