@@ -60,7 +60,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setFishData(data));
   }, []);
-
+  console.log(fishData)
   // const filteredFish = fishData.filter(fish => fish.name.toLowerCase().includes(search.toLowerCase()));
   const fishToRender = fishData.filter((fish) => {
     if (search === "") {
@@ -111,7 +111,7 @@ function App() {
                 search={search}
                 setSearch={setSearch}
               />
-              <Fish fishToRender={fishToRender} />
+              <Fish fishToRender={fishToRender} fishData={fishData} />
             </Route>
 
             {/* <div className="search-container">

@@ -31,6 +31,8 @@ function Fish({ fishToRender }) {
     );
   });
 
+  console.log(fishData)
+
   const fishList = fishData.map((fish) => {
     return (
       <FishCard
