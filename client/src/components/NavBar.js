@@ -23,7 +23,8 @@ const NavbarList = styled.ul`
 `;
 
 const NavbarItem = styled.li`
-    margin-right: 1rem; 
+    margin-right: 1rem;
+    font-size:25px; 
 `;
 
 const NavLink = styled.a`
@@ -32,8 +33,6 @@ const NavLink = styled.a`
     font-weight: bold; 
     color: white; 
     text-decoration: none; 
-    
-    
     &:hover {
       color: #ff0000; /* Change the font color on hover */
     }
@@ -68,7 +67,7 @@ function NavBar({ user, setUser,handleChange, search, setSearch }) {
         </NavbarItem>
         {/* Make sure you make a intro page component and swap out the recipe one */}
         <NavbarItem>
-          <NavLink to = "/recipes">First time setting up a tank?</NavLink>
+          <a href = "https://medium.com/@christopherchoute/setting-up-your-first-fish-tank-291d4fbd6e28">First time setting up a tank?</a>
         </NavbarItem>
           {/* <Button as={Link} to="/new">
             Add fish
@@ -101,7 +100,7 @@ const Logo = styled.h1`
   color: white;
   margin: 0;
   line-height: 1;
-  margin-right: 1000px;
+  margin-right: 860px;
 
   a {
     color: inherit;

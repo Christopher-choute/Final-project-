@@ -12,7 +12,7 @@ function Header({ handleChange, search, setSearch }) {
 
   return (
     <HeaderContainer>
-      <Link to="/FishSingle/1">
+      <Link to="/FishForm">
         <div className="sale-div">
           <NavbarContainer>
             <div>

@@ -6,6 +6,7 @@ from sqlalchemy.ext.associationproxy import association_proxy
 from config import db, bcrypt
 from sqlalchemy.ext.hybrid import hybrid_property
 
+
 # metadata = MetaData(naming_convention={
 #     "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
 # })
@@ -27,6 +28,7 @@ class Fish(db.Model, SerializerMixin):
     temperature_preference = db.Column(db.String)
     aggressiveness = db.Column(db.String)
     life_expectancy = db.Column(db.String)
+    description = db.Column(db.Text)
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 

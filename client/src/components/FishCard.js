@@ -23,8 +23,8 @@ function FishCard({
     <div className="fishCard">
       <Link to={`FishSingle/${id}`} style={linkStyle}>
         
-          <div className="fishInfo">
           <img src={image} className="fishImg" />
+          <div className="fishInfo">
             <p>Species: {species}</p>
             <p>Price: ${price}</p>
             {/* <p>Tank Size: {tank_size}</p>

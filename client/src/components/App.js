@@ -9,6 +9,8 @@ import Search from "./Search";
 import Header from "./Header";
 import "./index.css";
 import Edit from "./Edit";
+import FishForm from "./FishForm";
+import Footer from "./Footer";
 // import Sidebar from "./Sidebar";
 
 export const UserContext = createContext();
@@ -83,13 +85,11 @@ function App() {
   // if(sort)
   //       fetchFish = bubbleSort(fetchFish);
 
-  // function handleNewFish(newFishObj){
-  //   setfishData([...fishData, newFishObj])
+  function handleNewFish(newFishObj){
+    setFishData([...fishData, newFishObj])
+  }
 
   return (
-    // <ThemeProvider>
-    //   <GlobalStyle/>
-    // <ThemeProvider>
 
     <div>
       <UserContext.Provider value={[fishData]}>
@@ -129,6 +129,14 @@ function App() {
             <Route path="/edit/:id">
               <Edit updateFish={updateFish} />
               {/* <FakeEdit /> */}
+            </Route>
+
+            <Route path="/FishForm/">
+              <FishForm handleNewFish={handleNewFish}  />
+            </Route>
+
+            <Route>
+              <Footer />
             </Route>
 
             {/* <Header /> */}

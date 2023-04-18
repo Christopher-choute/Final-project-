@@ -26,6 +26,7 @@ function Fish({ fishToRender }) {
         temperature_preference={fish.temperature_preference}
         aggressiveness={fish.aggressiveness}
         life_expectancy={fish.life_expectancy}
+        description={fish.description}
       />
     );
   });
@@ -43,6 +44,7 @@ function Fish({ fishToRender }) {
         temperature_preference={fish.temperature_preference}
         aggressiveness={fish.aggressiveness}
         life_expectancy={fish.life_expectancy}
+        description={fish.description}
       />
     );
   });

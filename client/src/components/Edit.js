@@ -17,44 +17,50 @@ function Edit({updateFish}){
     const [temperature_preference, setTemperaturePreference] = useState('"');
     const [aggressiveness, setAggressiveness] = useState("");
     const [life_expectancy, setLifeExpectancy]= useState("");
+    const [description, setDescription]= useState("");
 
     const [used, setUsed] = useState(false);
     // console.log(id)
 
+    
     function handleSpecies(species) {
         setSpecies(species.target.value);
-      }
+    }
 
+    
     function handleTankSize(tank_size) {
         setTankSize(tank_size.target.value);
-      }
-
+    }
+    
     function handleImage(image) {
         setImage(image.target.value);
       }
 
-    function handlePrice(price) {
+      function handlePrice(price) {
         setPrice(price.target.value);
-      }
+    }
     
     function handleWaterPreference(water_preference) {
         setWaterPreference(water_preference.target.value);
-      }
-
+    }
+    
     function handleTemperature(temperature_preference){
         setTemperaturePreference(temperature_preference.target.value)
     }
-
+    
     function handleAggressiveness(aggressiveness){
         setAggressiveness(aggressiveness.target.value)
     }
-
+    
     function handleLifeExpectancy(life_expectancy){
         setLifeExpectancy(life_expectancy.target.value)
     }
-
     
-
+    function handleDescription(description){
+        setDescription(description.target.value);
+    }
+    
+    
     function handlePatch(id){
         fetch(`/fishes/${id}`, {
             method: "PATCH",
@@ -84,6 +90,7 @@ function Edit({updateFish}){
                 setLifeExpectancy(fish.life_expectancy);
                 setAggressiveness(fish.aggressiveness);
                 setTemperaturePreference(fish.temperature_preference);
+                setDescription(fish.description);
             })
     }, [])
     
@@ -177,6 +184,17 @@ function Edit({updateFish}){
                     className = 'input_text'
                     onChange= {handleTemperature}
                     value = {temperature_preference}
+                />
+            </Form.Field>
+            <Form.Field>
+                <label>Description:</label>
+                <input 
+                    type = 'text'
+                    name = 'Description'
+                    placeholder="Enter Description"
+                    className = 'input_text'
+                    onChange= {handleDescription}
+                    value = {description}
                 />
             </Form.Field>
             <Button type= 'submit'>Submit Changes</Button>

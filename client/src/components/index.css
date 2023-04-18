@@ -19,27 +19,25 @@
 } */ 
 
 .fishImg {
-    width: 100%;
+    width: 75%;
     height: 75%;
-    /* left: 15%; */
+    left: 15%;
     position: relative;
     transition: 1s ease;
-  
   }
   
   .fishInfo{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     /* padding: 10px; */
     max-width: 75%;
     /* max-height: 100vh; */
     margin: 0 auto;
   }
 
-.fishImg:hover{
-   /* Add a white shadow effect */
+/* .fishImg:hover{
    border-radius:50%;
    transition: 1s ease;
-}
+} */
   
   .fish {
     display: grid;
@@ -52,18 +50,56 @@
     font-weight: bolder;
     color: black;
   }
-  
 
-.soloFish{
-  text-align: center;
-}
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .description{
+    display: flex;
+    position: relative;
+    min-width: 50vw;
+    align-content: center;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 50px;
+    font-weight: 1000;
+    font-size: large;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+ .soloFish{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ } 
+
+ .info{
+  min-width: 50vh;
+ }
+ 
 
 .soloFish Img {
-    max-width: 100%;
-    max-height: 500px;
+    width: 100vw;
+    /* height: 75vw; */
+    max-height: 550px;
     object-fit: cover;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin-right: 30vw;
 }
+
+.soloFish p{
+  margin-top: 10px; /* Adds margin to the top */
+  margin-left: 10px;
+  text-align: justify;
+  /* background-color: whitesmoke; */
+}
+
+.container{
+  background-color:whitesmoke;
+}
+
 
 .button {
   font-size: 20px;
@@ -80,7 +116,7 @@
   
 .button:hover {
   background-color: white;
-  color: #33cccc;
+ color: #33cccc;
 }
 
 .searchBar{
@@ -91,11 +127,12 @@
   /* position: "fixed"; */
   /* margin-left: 500px; */
 }
+
 .searchIcon{
-/* flex-direction: row; */
 display: flex;
  position: relative;
 }
+
 
 .sale-div {
   background-image: url(https://clickhole.com/wp-content/uploads/2021/04/iStock-519618496-scaled-e1617891544142.jpg);
@@ -119,3 +156,4 @@ display: flex;
   color: white;
   font-size: 50px;
 }
+
