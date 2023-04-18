@@ -45,7 +45,8 @@ function App() {
       headers: { "Content-Type": "application/json" },
     })
       .then(() => setDeleted(!deleted))
-      .then(() => history.push("/fishes"));
+      .then(() => history.push("/"));
+      window.location.reload();
   }
 
   function updateFish(updatedFish) {
@@ -135,13 +136,13 @@ function App() {
               <FishForm handleNewFish={handleNewFish}  />
             </Route>
 
-            <Route>
-              <Footer />
-            </Route>
+            
+            
 
             {/* <Header /> */}
           </Switch>
         </main>
+              <Footer />
       </UserContext.Provider>
     </div>
     //

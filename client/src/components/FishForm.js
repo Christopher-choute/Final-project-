@@ -63,7 +63,7 @@ function FishForm({ handleNewFish }) {
       body: JSON.stringify({
         species: "",
         tank_size: "",
-        price: "",
+        price: 300.0,
         image: "",
         temperature_preference: "",
         water_preference: "",

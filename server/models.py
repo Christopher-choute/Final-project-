@@ -22,14 +22,14 @@ class Fish(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     image = db.Column (db.String)
     species = db.Column (db.String)
-    price = db.Column(db.Float)
+    price = db.Column(db.String)
     tank_size = db.Column(db.String)
     water_preference= db.Column(db.String)
     temperature_preference = db.Column(db.String)
     aggressiveness = db.Column(db.String)
     life_expectancy = db.Column(db.String)
     description = db.Column(db.Text)
-    
+
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 

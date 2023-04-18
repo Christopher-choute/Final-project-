@@ -57,7 +57,7 @@ def fish():
             db.session.commit()
 
             response = make_response(
-                jsonify(new_fish),
+                new_fish.to_dict(),
                 201
             )
 
