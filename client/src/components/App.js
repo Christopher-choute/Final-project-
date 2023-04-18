@@ -131,7 +131,7 @@ function App() {
               {/* <FakeEdit /> */}
             </Route>
 
-            <Route path="/FishForm/">
+            <Route exact path="/FishForm/">
               <FishForm handleNewFish={handleNewFish}  />
             </Route>
 

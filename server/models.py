@@ -29,6 +29,7 @@ class Fish(db.Model, SerializerMixin):
     aggressiveness = db.Column(db.String)
     life_expectancy = db.Column(db.String)
     description = db.Column(db.Text)
+    
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 

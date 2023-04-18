@@ -27,8 +27,8 @@ def home():
 
 @app.route('/fishes', methods=['GET', 'POST'])
 def fish():
-    fishes = Fish.query.all()
     if request.method == 'GET':
+        fishes = Fish.query.all()
         fishes_dict = [fish.to_dict() for fish in fishes]
 
         response = make_response(
@@ -44,13 +44,14 @@ def fish():
         try:
             new_fish = Fish(
                 species = request.get_json()['species'],
-                tank_size = request.get_json()['tank size'],
-                water_preference = request.get_json()['water preference'],
-                temperature_preference = request.get_json()['temperature preference'],
+                tank_size = request.get_json()['tank_size'],
+                water_preference = request.get_json()['water_preference'],
+                temperature_preference = request.get_json()['temperature_preference'],
                 image = request.get_json()['image'],
                 aggressiveness = request.get_json()['aggressiveness'],
-                life_expectancy = request.get_json()['life expectancy'],
-                price = request.get_json()['price']
+                life_expectancy = request.get_json()['life_expectancy'],
+                price = request.get_json()['price'],
+                description = request.get_json()['description']
             )
             db.session.add(new_fish)
             db.session.commit()

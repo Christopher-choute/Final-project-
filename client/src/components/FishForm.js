@@ -13,6 +13,7 @@ function FishForm({ handleNewFish }) {
   const [life_expectancy, setLifeExpectancy] = useState("");
   const [description, setDescription] = useState("");
   //   const [isLoading, updateIsLoading] = useState(false);
+  console.log(tank_size)
 
   function handleSpecies(species) {
     setSpecies(species.target.value);
@@ -56,23 +57,26 @@ function FishForm({ handleNewFish }) {
     fetch("/fishes", {
       method: "POST",
       headers: {
-        Accept: "application/json",
+        // 'Accept': "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        species: species,
-        tank_size: tank_size,
-        price: price,
-        image: image,
-        temperature_preference: temperature_preference,
-        water_preference: water_preference,
-        aggressiveness: aggressiveness,
-        life_expectancy: life_expectancy,
-        description: description,
+        species: "",
+        tank_size: "",
+        price: "",
+        image: "",
+        temperature_preference: "",
+        water_preference: "",
+        aggressiveness:"" ,
+        life_expectancy: "",
+        description: "",
       }),
     }).then((response) => {
+      return response.json()
       //   updateIsLoading(false);
-    });
+    })
+      .then((data)=> console.log(data));
+
   }
 
   return (
