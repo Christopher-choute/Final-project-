@@ -8,37 +8,37 @@ const Footer = () => {
   const title = "Fish Haven";
 
   const columns = [{
-    title: "Column 1",
+    title: "Want to reach out?",
     resources: [{
-      name: "Item 1",
-      link: "/item1"
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/chris-choute-521864262/"
     },{
-      name: "Item 2",
-      link: "/item2"
+      name: "Instagram",
+      link: "https://www.instagram.com/chris_choute/"
     },{
-      name: "Item 3",
-      link: "/item3"
+      name: "Twitter",
+      link: "https://twitter.com/home"
     },{
       name: "Item 4",
       link: "/item4"
     }]
   },{
-    title: "Column 2",
+    title: "Here's more info!",
     resources: [{
-      name: "Item 5",
-      link: "/item5"
+      name: "Setting up your first Freshwater tank!",
+      link: "https://www.youtube.com/watch?v=tSg-Zgps_d0"
     },{
-      name: "Item 6",
-      link: "/item6"
+      name: "Setting up your first Saltwater tank!",
+      link: "https://www.youtube.com/watch?v=p9BkkaWXAiE"
     }]
   },{
-    title: "Column 3",
+    title: "Fish for beginners!",
     resources: [{
-      name: "Item 7",
-      link: "/item7"
+      name: "Freshwater",
+      link: "https://fishkeepingadvice.com/13-best-freshwater-fish/"
     },{
-      name: "Item 8",
-      link: "/item8"
+      name: "Saltwater",
+      link: "https://oceanfloorstore.com/best-saltwater-aquarium-fish-for-beginners/"
     }]
   }];
 
@@ -48,10 +48,9 @@ const Footer = () => {
     title={title}
     columns={columns}
     linkedin="https://www.linkedin.com/in/chris-choute-521864262/"
-    instagram="lorem_ipsum_live"
+    instagram="https://www.instagram.com/chris_choute/"
     iconColor="black"
     backgroundColor="#33cccc"
-    class= "footer"
   />;
 }
 
