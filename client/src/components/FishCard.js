@@ -23,10 +23,10 @@ function FishCard({
     <div className="fishCard">
       <Link to={`FishSingle/${id}`} style={linkStyle}>
         
-          <img src={image} className="fishImg" />
+          <img src={image} className="fishImg Rob" />
           <div className="fishInfo">
             <p>Species: {species}</p>
-            <p>Price: ${price}</p>
+            <p>Price: ${parseFloat(price).toFixed(2)}</p>
             {/* <p>Tank Size: {tank_size}</p>
                 <p>Water Preference: {water_preference}</p>
                 <p>Temperature Preference: {temperature_preference}</p>

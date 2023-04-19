@@ -34,10 +34,10 @@
     margin: 0 auto;
   }
 
-/* .fishImg:hover{
+.fishImg.Rob:hover{
    border-radius:50%;
    transition: 1s ease;
-} */
+}
   
   .fish {
     display: grid;
@@ -97,7 +97,7 @@
 }
 
 .container{
-  background-color:whitesmoke;
+  background-color:white;
 }
 
 
@@ -157,3 +157,12 @@ display: flex;
   font-size: 50px;
 }
 
+#login_page {
+  background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255, 0.75)), url('https://wallpaperaccess.com/full/1361516.jpg');
+  height: 100vh;
+}
+
+.Nickita{
+  position: absolute;
+  height: 300%;
+}

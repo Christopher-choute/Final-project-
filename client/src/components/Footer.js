@@ -1,10 +1,10 @@
 import React from 'react';
 import SimpleReactFooter from 'simple-react-footer';
-import './Footer.css';
+
 
 const Footer = () => {
   // Define the data for the footer
-  const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const description = "Fish haven is a full stack website created by Christopher Choute using React and Flask SQlAlchemy. I want to thank Tyler and Eleanor for being the best instructors ever and I want to thank my peers for helping me in times of need since phase 1.";
   const title = "Fish Haven";
 
   const columns = [{
@@ -47,6 +47,9 @@ const Footer = () => {
     description={description}
     title={title}
     columns={columns}
+    linkedin="https://www.linkedin.com/in/chris-choute-521864262/"
+    instagram="lorem_ipsum_live"
+    iconColor="black"
     backgroundColor="#33cccc"
     class= "footer"
   />;

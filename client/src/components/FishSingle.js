@@ -47,13 +47,13 @@ function FishSingle({ deleteItem }) {
       <div className="container">
       <div className="info">
         <Link to={`/edit/${id}`}>
-          <i className="edit icon" style={{ float: "right" }}></i>
+          <i className="edit icon"></i>
         </Link>
         <h1>Species: {species}</h1>
         <h1>Price: ${price}</h1>
         <h2 className="h2"> Tank size: {tank_size} </h2>
         <h2 className="h2"> Water preference: {water_preference}</h2>
-        <h2 className="h2"> Life expectancy: {life_expectancy} Years</h2>
+        <h2 className="h2"> Life expectancy: {life_expectancy}</h2>
         <h2 className="h2"> Aggressiveness: {aggressiveness}</h2>
         <h2 className="h2">Temperature preference: {temperature_preference}</h2>
         {/* <p className="h2">Description: {description}</p> */}

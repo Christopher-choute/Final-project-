@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "../Styles";
 import Search from "./Search";
 import { UserContext } from "./App";
+import "./index.css";
 // import { useHistory } from "react-router-dom";
 // import {UserContext} from "./UserContext";
 // import { NavLink } from 'react-router-dom';
@@ -54,7 +55,7 @@ function NavBar({ user, setUser,handleChange, search, setSearch }) {
 
   return (
     <Wrapper>
-      <Search onChange={handleChange} search={search} setSearch={setSearch} />
+      <Search id='search' onChange={handleChange} search={search} setSearch={setSearch} className="Nickita" />
       <Logo>
         <Link to="/" className="haven">Fish Haven</Link>
         {/* <h1 className="slogan">Dive into the world of fish trading</h1> */}
@@ -67,7 +68,7 @@ function NavBar({ user, setUser,handleChange, search, setSearch }) {
         </NavbarItem>
         {/* Make sure you make a intro page component and swap out the recipe one */}
         <NavbarItem>
-          <a href = "https://medium.com/@christopherchoute/setting-up-your-first-fish-tank-291d4fbd6e28">First time setting up a tank?</a>
+          <a href = "https://medium.com/@christopherchoute/setting-up-your-first-fish-tank-291d4fbd6e28" target="_">First time setting up a tank?</a>
         </NavbarItem>
           {/* <Button as={Link} to="/new">
             Add fish

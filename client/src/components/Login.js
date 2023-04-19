@@ -3,42 +3,45 @@ import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import { Button } from "../Styles";
+import { Card } from "semantic-ui-react";
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <Wrapper>
-      <Logo>Fish Haven</Logo>
-      {showLogin ? (
-        <>
-          <LoginForm onLogin={onLogin} />
-          <Divider />
-          <p>
-            Don't have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(false)}>
-              Sign Up
-            </Button>
-          </p>
-        </>
-      ) : (
-        <>
-          <SignUpForm onLogin={onLogin} />
-          <Divider />
-          <p>
-            Already have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(true)}>
-              Log In
-            </Button>
-          </p>
-        </>
-      )}
-    </Wrapper>
+    <Card id='login_page' fluid>
+      <Wrapper>
+        <Logo>Fish Haven</Logo>
+        {showLogin ? (
+          <>
+            <LoginForm onLogin={onLogin} />
+            <Divider />
+            <p>
+              Don't have an account? &nbsp;
+              <Button color="secondary" onClick={() => setShowLogin(false)}>
+                Sign Up
+              </Button>
+            </p>
+          </>
+        ) : (
+          <>
+            <SignUpForm onLogin={onLogin} />
+            <Divider />
+            <p>
+              Already have an account? &nbsp;
+              <Button color="secondary" onClick={() => setShowLogin(true)}>
+                Log In
+              </Button>
+            </p>
+          </>
+        )}
+      </Wrapper>
+    </Card>
   );
 }
 
 const Logo = styled.h1`
-  font-family: "Times New Roman",Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 3rem;
   color: blue;
   margin: 8px 0 16px;
