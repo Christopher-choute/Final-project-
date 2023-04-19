@@ -50,7 +50,7 @@ function FishSingle({ deleteItem }) {
           <i className="edit icon"></i>
         </Link>
         <h1>Species: {species}</h1>
-        <h1>Price: ${price}</h1>
+        <h1>Price: ${parseFloat(price).toFixed(2)}</h1>
         <h2 className="h2"> Tank size: {tank_size} </h2>
         <h2 className="h2"> Water preference: {water_preference}</h2>
         <h2 className="h2"> Life expectancy: {life_expectancy}</h2>
