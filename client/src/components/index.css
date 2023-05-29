@@ -65,8 +65,7 @@
     margin-top: 70px;
     margin-left: 50px;
     font-weight: 1000;
-    font-size: large;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif !important;
   }
 
  .soloFish{ 

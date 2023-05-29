@@ -19,7 +19,7 @@ const Footer = () => {
       name: "Twitter",
       link: "https://twitter.com/home"
     },{
-      name: "Item 4",
+      name: "",
       link: "/item4"
     }]
   },{

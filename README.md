@@ -314,3 +314,5 @@ Happy coding!
 - [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 - [Python Circular Imports - StackAbuse](https://stackabuse.com/python-circular-imports/)
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/)
+
+To start up the application Run NPM start in the client side directory to boot up the front end, Then on the back end go into server, run pipenv shell, CD into server again and run python app.py
